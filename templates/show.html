@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="{{ url_for('static', filename='js/mermaid.min.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: true, theme: 'default'});
+        });
+    </script>
+</head>
+<body>
+    {{ instance }}
+    <div class="mermaid">
+        {{ mermaid_diagram | safe }}
+    </div>
+</body>
+</html>
+

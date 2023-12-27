@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagrams</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/select2.min.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/select2.min.js') }}"></script>
+</head>
+<body>
+    <h1>Diagrams</h1>
+    <form action="/show" method="GET">
+        <label for="selectEntry">Select Instance:</label>
+        <select id="selectEntry" name="instance" style="width: 200px;">
+            {% for item in instancies %}
+                <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+        </select>
+      
+        <button type="submit">Show</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $('#selectEntry').select2();
+        });
+    </script>
+</body>
+</html>

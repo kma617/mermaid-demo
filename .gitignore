@@ -1,0 +1,25 @@
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyi
+*.egg-info/
+dist/
+build/
+*.egg
+*.log
+*.swp
+*.swo
+*.bak
+*.tmp
+*.tmp.*
+*.~*
+.DS_Store
+.env
+.env.*
+.idea/
+.vscode/
+# Add any other files or directories to ignore here
